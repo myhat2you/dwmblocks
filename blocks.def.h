@@ -1,11 +1,19 @@
 //Modify this file to change what commands output to your statusbar, and recompile using the make command.
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
-	{"Mem:", "free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g",	30,		0},
-
-	{"", "date '+%b %d (%a) %I:%M%p'",					5,		0},
+	{"",		"sb-clock",		60					8},
+	{"",		"sb-volume",	0					7},
+	{"",		"sb-memory",	30					6},
+	{"",		"sb-cpu",		30					5},
+	{"",		"sb-disk",		30					4},
+	{"",		"sb-updates",	0					3},
+	{"",		"sb-internet",	10					2},
+	{"",		"sb-battery",	30					1},
 };
 
 //sets delimeter between status commands. NULL character ('\0') means no delimeter.
 static char delim[] = " | ";
 static unsigned int delimLen = 5;
+
+//auto recompile and run with this command in vimrc/init.vim
+//autocmd BufWritePost ~/.local/src/blocks.def.h !cd ~/.local/src/dwmblocks/; sudo make install && killall -q dwmblocks;setsid dwmblocks &
