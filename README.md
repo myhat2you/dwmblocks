@@ -22,9 +22,10 @@ along side my volume shortcuts in dwm to only update it when relevant.
 Note that all modules must have different signal numbers.
 
 # Clickable modules
+The [statuscmd](https://dwm.suckless.org/patches/statuscmd/) patch adds the ability to 
+signal to dwmblocks the location and button when clicking on the status bar.
 See the above linked scripts for examples of this using the `$BLOCK_BUTTON` variable.
 
+This patch version is compatible with the status2d dwm patch.
 For this feature to work, you need the appropriate patch in dwm as well.
-See [here](https://dwm.suckless.org/patches/statuscmd/).
 Credit for those patches goes to Daniel Bylinka (daniel.bylinka@gmail.com).
-
