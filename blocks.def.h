@@ -37,4 +37,5 @@ static unsigned int delimLen = 5;
  * mpdup            volume   kill -45
  * checkup          updates  RTMIN+3
  * newsup           news     RTMIN+5
+ * ncmpcpp/config   music    RTMIN+11
 */
